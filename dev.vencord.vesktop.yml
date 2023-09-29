@@ -16,6 +16,9 @@ finish-args:
   - --device=all
   - --talk-name=org.freedesktop.Notifications
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
+  - --filesystem=xdg-videos:ro
+  - --filesystem=xdg-pictures:ro
+  - --filesystem=xdg-download
   - --own-name=org.mpris.MediaPlayer2.vesktop
   - --talk-name=org.gnome.Mutter.IdleMonitor
   - --talk-name=org.kde.StatusNotifierWatcher
