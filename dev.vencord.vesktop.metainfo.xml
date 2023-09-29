@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>dev.vencord.vesktop</id>
+  <name>Vesktop</name>
+  <summary>Vencord client for Discord</summary>
+  <developer_name>Vencord</developer_name>
+  <url type="homepage">https://github.com/Vencord/Vesktop</url>
+  <url type="bugtracker">https://github.com/Vencord/Vesktop/issues</url>
+  <metadata_license>GPL-3.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+  <categories>
+    <category>InstantMessaging</category>
+    <category>Network</category>
+  </categories>
+  <description>
+    <p>
+Vesktop is a cross platform desktop app aiming to give you a snappier Discord experience with Vencord pre-installed
+    </p>
+  </description>
+  <launchable type="desktop-id">dev.vencord.vesktop.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://user-images.githubusercontent.com/45497981/235024615-94565eaf-f412-4384-a3f5-d8cde7458f6d.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.3.2" date="2023-09-25">
+      <description>
+        <p>First flatpak release</p>
+      </description>
+      </release>
+  </releases>
+</component>

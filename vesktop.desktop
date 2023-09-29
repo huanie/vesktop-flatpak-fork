@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Vesktop
+Exec=AppRun --no-sandbox --use-tray-icon %U
+Terminal=false
+Type=Application
+Icon=vencorddesktop
+StartupWMClass=Vesktop
+X-AppImage-Version=0.3.2
+GenericName=Internet Messenger
+Categories=Network;
+Keywords=discord;vencord;electron;chat;
