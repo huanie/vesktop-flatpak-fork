@@ -30,8 +30,8 @@ modules:
   - name: vesktop
     buildsystem: simple
     build-commands:
-      - chmod +x Vesktop-0.3.2.AppImage
-      - ./Vesktop-0.3.2.AppImage --appimage-extract
+      - chmod +x Vesktop-*.AppImage
+      - ./Vesktop-*.AppImage --appimage-extract
 
       - install -dm755 "${FLATPAK_DEST}/bin" "${FLATPAK_DEST}/lib/vesktop"
       - cp -r squashfs-root/* "${FLATPAK_DEST}/lib/vesktop"
@@ -45,7 +45,10 @@ modules:
     sources:
       - type: file
         url: https://github.com/Vencord/Vesktop/releases/download/v0.3.2/Vesktop-0.3.2.AppImage
-        sha256: 10a2a710dd16abc36e8a78b51d4410e8eaf83c2ec8e6c11a60abb2a99620095e
+        sha512: 5c311d867d331f291037bdccc4dea45196e96a562308ec7434ff54faec6bed32
+        x-checker-data:
+          type: electron-updater
+          url: https://github.com/Vencord/Vesktop/releases/latest/download/latest-linux.yml
       - type: file
         path: dev.vencord.vesktop.metainfo.xml
       - type: file
