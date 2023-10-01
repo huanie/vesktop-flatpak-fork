@@ -25,6 +25,18 @@ Vesktop is a cross platform desktop app aiming to give you a snappier Discord ex
   </screenshots>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="0.3.3" date="2023-09-25">
+      <description>
+       <p>
+       
+    fix: appimage not relaunching by @zyrouge in #128
+    Bump Electron to 25.8.4 for CVE-2023-5217 by @Cynosphere in #134
+    Optimize the menu bar for macOS by @X1nto in #120
+    Fix deb/rpm app icon
+
+       </p>
+    </description>
+    </release>
     <release version="0.3.2" date="2023-09-25">
       <description>
         <p>First flatpak release</p>
