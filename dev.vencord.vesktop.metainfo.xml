@@ -23,8 +23,9 @@ Vesktop is a cross platform desktop app aiming to give you a snappier Discord ex
       <image>https://user-images.githubusercontent.com/45497981/235024615-94565eaf-f412-4384-a3f5-d8cde7458f6d.png</image>
     </screenshot>
   </screenshots>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <releases>
+    <release version="0.3.3" date="2023-09-30"/>
     <release version="0.3.2" date="2023-09-25">
       <description>
         <p>First flatpak release</p>

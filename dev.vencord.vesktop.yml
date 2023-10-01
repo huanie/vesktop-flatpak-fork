@@ -1,8 +1,8 @@
 app-id: dev.vencord.vesktop
 base: org.electronjs.Electron2.BaseApp
-base-version: "22.08"
+base-version: '22.08'
 runtime: org.freedesktop.Platform
-runtime-version: "22.08"
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 command: dev.vencord.vesktop
@@ -39,13 +39,15 @@ modules:
 
       - install -Dm644 "dev.vencord.vesktop.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/dev.vencord.vesktop.png"
       - install -Dm755 "run.sh" "${FLATPAK_DEST}/bin/dev.vencord.vesktop"
-      - desktop-file-install --dir="${FLATPAK_DEST}/share/applications" --remove-key=X-AppImage-Version --set-key=Exec --set-value=dev.vencord.vesktop --set-key=Icon --set-value=dev.vencord.vesktop vesktop.desktop
+      - desktop-file-install --dir="${FLATPAK_DEST}/share/applications" --remove-key=X-AppImage-Version
+        --set-key=Exec --set-value=dev.vencord.vesktop --set-key=Icon --set-value=dev.vencord.vesktop
+        vesktop.desktop
 
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo dev.vencord.vesktop.metainfo.xml
     sources:
       - type: file
-        url: https://github.com/Vencord/Vesktop/releases/download/v0.3.2/Vesktop-0.3.2.AppImage
-        sha512: 5c311d867d331f291037bdccc4dea45196e96a562308ec7434ff54faec6bed32
+        url: https://github.com/Vencord/Vesktop/releases/latest/download/Vesktop-0.3.3.AppImage
+        sha512: c28beda1268b784723df76f0a6e82032801e1c8c6179dc68baccfce177ee26bc1c55b7262cd7652fe24c30419dbbe70d8058541bda1d8b2f6893ce6ac6115cf4
         x-checker-data:
           type: electron-updater
           url: https://github.com/Vencord/Vesktop/releases/latest/download/latest-linux.yml
