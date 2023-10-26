@@ -25,23 +25,21 @@ Vesktop is a cross platform desktop app aiming to give you a snappier Discord ex
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="0.4.0" date="2023-10-21"/>
-    <release version="0.3.3" date="2023-09-25">
+    <release version="0.4.1" date="2023-10-24">
       <description>
        <p>
        
-    fix: appimage not relaunching by @zyrouge in #128
-    Bump Electron to 25.8.4 for CVE-2023-5217 by @Cynosphere in #134
-    Optimize the menu bar for macOS by @X1nto in #120
-    Fix deb/rpm app icon
+    Add arm64 Linux packages by @FieryFlames in #151
+    feat: allow disabling updates check by @ryanccn in #155
+    fix transparency on Windows/Linux by @AAGaming00 in #164
+    Fix : VM class for AppImage has broken Dekstop integrations by @MiMillieuh in #160
+    Use local shiggy gif for splash by @wearrrrr in #157
+    Linux ScreenAudio: Remove Duplicates
+    Fix update window close button
+    Fix crashing on latest canary
 
        </p>
     </description>
     </release>
-    <release version="0.3.2" date="2023-09-25">
-      <description>
-        <p>First flatpak release</p>
-      </description>
-      </release>
   </releases>
 </component>
