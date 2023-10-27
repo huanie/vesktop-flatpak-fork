@@ -1,11 +1,11 @@
-app-id: dev.vencord.vesktop
+app-id: dev.vencord.Vesktop
 base: org.electronjs.Electron2.BaseApp
 base-version: '23.08'
 runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
-command: dev.vencord.vesktop
+command: dev.vencord.Vesktop
 rename-desktop-file: vesktop.desktop
 finish-args:
   - --share=ipc
@@ -38,13 +38,13 @@ modules:
       - cp -r squashfs-root/* "${FLATPAK_DEST}/lib/vesktop"
       - cp -r squashfs-root/usr/lib/* "${FLATPAK_DEST}/lib"
 
-      - install -Dm644 "dev.vencord.vesktop.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/dev.vencord.vesktop.png"
-      - install -Dm755 "run.sh" "${FLATPAK_DEST}/bin/dev.vencord.vesktop"
+      - install -Dm644 "dev.vencord.Vesktop.png" "${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/dev.vencord.Vesktop.png"
+      - install -Dm755 "run.sh" "${FLATPAK_DEST}/bin/dev.vencord.Vesktop"
       - desktop-file-install --dir="${FLATPAK_DEST}/share/applications" --remove-key=X-AppImage-Version
-        --set-key=Exec --set-value=dev.vencord.vesktop --set-key=Icon --set-value=dev.vencord.vesktop
+        --set-key=Exec --set-value=dev.vencord.Vesktop --set-key=Icon --set-value=dev.vencord.Vesktop
         vesktop.desktop
 
-      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo dev.vencord.vesktop.metainfo.xml
+      - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo dev.vencord.Vesktop.metainfo.xml
     sources:
       - type: file
         url: https://github.com/Vencord/Vesktop/releases/latest/download/Vesktop-0.4.2.AppImage
@@ -53,9 +53,9 @@ modules:
           type: electron-updater
           url: https://github.com/Vencord/Vesktop/releases/latest/download/latest-linux.yml
       - type: file
-        path: dev.vencord.vesktop.metainfo.xml
+        path: dev.vencord.Vesktop.metainfo.xml
       - type: file
-        path: dev.vencord.vesktop.png
+        path: dev.vencord.Vesktop.png
       - type: file
         path: vesktop.desktop
       - type: file
