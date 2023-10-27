@@ -47,8 +47,8 @@ modules:
       - install -Dm644 -t ${FLATPAK_DEST}/share/metainfo dev.vencord.vesktop.metainfo.xml
     sources:
       - type: file
-        url: https://github.com/Vencord/Vesktop/releases/latest/download/Vesktop-0.4.1.AppImage
-        sha512: 94db2546aa47635af1b52c407b1878419a62531fb591745a3f493b20e13559e4e25760ebd1174bdcee33efe7d32134640539053aa20fffa9ce38fee82c5c25bc
+        url: https://github.com/Vencord/Vesktop/releases/latest/download/Vesktop-0.4.2.AppImage
+        sha512: a95ab261cd3bf4f70e91061617d17fcf66c8f92e131c59fb0cf550452982882df8c641f9483334e2104568ceb8d2e4173d0bc4646d2d1b51525d5663a1b35ed6
         x-checker-data:
           type: electron-updater
           url: https://github.com/Vencord/Vesktop/releases/latest/download/latest-linux.yml

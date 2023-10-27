@@ -25,6 +25,21 @@ Vesktop is a cross platform desktop app aiming to give you a snappier Discord ex
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+  <release version="0.4.2" date="2023-10-27">
+    <description>
+     <p>
+
+    
+    you should no longer get captchas when joining servers / adding friends
+    fix spellcheck by @rniii in #169
+    fix hiding download app button in #176
+    linux screenaudio: now displays more useful error when venmic fails due to libc++ being too old
+    linux screenaudio: now works on arm64
+    
+     </p>
+    </description>
+  </release>
+
     <release version="0.4.1" date="2023-10-24">
       <description>
        <p>
