@@ -4,13 +4,7 @@ for i in {0..9}; do
     test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
 done
 
-#!/bin/sh
-# Discord RPC
-for i in {0..9}; do
-    test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
-done
-
-declare -a EXTRA_FLAGS=()
+EXTRA_FLAGS="--no-sandbox"
 
 # Display Socket
 if [[ $XDG_SESSION_TYPE == "wayland" ]]
@@ -21,27 +15,18 @@ then
     then
         echo "Wayland socket found, running via Wayland."
         echo "To run via XWayland, remove the --socket=wayland permission."
-        EXTRA_FLAGS+=(
-            "--enable-features=WaylandWindowDecorations"
-            "--ozone-platform=wayland"
-        )
+        EXTRA_FLAGS="$EXTRA_FLAGS --enable-features=WaylandWindowDecorations --ozone-platform=wayland"
+        
     else
         echo "No Wayland permission, running via XWayland."
     fi
     if [[ -c /dev/nvidia0 ]]
     then
         echo "Using NVIDIA on Wayland, applying workaround"
-        EXTRA_FLAGS+=("--disable-gpu-sandbox")
+        EXTRA_FLAGS="$EXTRA_FLAGS --disable-gpu-sandbox"
     fi
 
 fi
 
 cd /app/lib/vesktop
-export TMPDIR="$XDG_CACHE_HOME"
-exec zypak-wrapper ./vencorddesktop "${EXTRA_FLAGS[@]}" "$@"
-
-declare -a EXTRA_FLAGS=()
-
-cd /app/lib/vesktop
-export TMPDIR="$XDG_CACHE_HOME"
-exec zypak-wrapper ./vencorddesktop "${EXTRA_FLAGS[@]}" "$@"
+env TMPDIR="$XDG_CACHE_HOME" zypak-wrapper ./vencorddesktop $EXTRA_FLAGS "$@"

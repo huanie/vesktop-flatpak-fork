@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Vesktop
-Exec=AppRun --no-sandbox --use-tray-icon %U
+Exec=AppRun %U
 Terminal=false
 Type=Application
 Icon=vencorddesktop
