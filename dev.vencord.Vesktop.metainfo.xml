@@ -23,6 +23,16 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+  <release version="0.4.3" date="2023-11-01">
+   <description>
+    <ul>
+    
+     <li>MacOS: fix positioning of traffic lights by @pupbrained in #185</li>
+     <li>SteamOS: fixes & official controller layout by @AAGaming00 in #194</li>
+     <li>linux: audio screenshare should now also work on less up to date distros</li>
+    
+     </ul>
+   </description>
   <release version="0.4.2" date="2023-10-27">
    <description>
     <ul>
